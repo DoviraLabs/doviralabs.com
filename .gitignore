@@ -1,0 +1,21 @@
+node_modules/
+.tools/
+.qa/
+dist/
+.DS_Store
+*.local
+.env
+.env.*
+!.env.example
+
+# Local references, caches and credentials
+Danish local idea folder/
+*.log
+*.tsbuildinfo
+.vite/
+.wrangler/
+.codex/
+*.pem
+*.key
+*.p12
+*.pfx
