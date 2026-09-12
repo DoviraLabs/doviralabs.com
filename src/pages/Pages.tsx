@@ -37,7 +37,7 @@ export function AppLock() {
           <h1>App Lock</h1>
           <p className="page-intro">An Android app from Dovira Labs.</p>
           <p className="muted">
-            Full product details and availability will be published when they are confirmed.
+            Product details and availability will be added when confirmed.
           </p>
           <span className="status mt-6">Details coming soon</span>
           <div className="hero-actions">
@@ -74,7 +74,7 @@ const content: Record<
     sections: [
       {
         title: "Current status",
-        copy: "App Lock is still being prepared for release. Its full product privacy policy will be published before public release. Until then, this page does not describe the app’s final data practices.",
+        copy: "App Lock is being prepared for release. A full product-specific privacy policy will be published before public release. Until then, this page does not describe the app’s final data practices.",
       },
       {
         title: "Privacy questions",
@@ -91,11 +91,11 @@ const content: Record<
   "/support": {
     label: "HERE TO HELP",
     title: "Product support",
-    intro: "Support information for Dovira Labs products.",
+    intro: "Support for Dovira Labs products.",
     sections: [
       {
         title: "Contact support",
-        copy: "For product questions, technical problems, or bug reports, email our support address.",
+        copy: "For product questions, technical problems, or bug reports, email our support team.",
         email: "support@doviralabs.com",
       },
     ],
@@ -111,7 +111,7 @@ const content: Record<
     sections: [
       {
         title: "Get help",
-        copy: "For App Lock questions or to report a problem, email our support address.",
+        copy: "For App Lock questions or to report a problem, email our support team.",
         email: "support@doviralabs.com",
       },
       {
@@ -127,21 +127,21 @@ const content: Record<
   "/contact": {
     label: "CONTACT",
     title: "Get in touch.",
-    intro: "Questions, support, or a project you would like to discuss?",
+    intro: "Have a question, need support, or want to discuss a project?",
     sections: [
       {
         title: "General and business enquiries",
-        copy: "For general questions, collaborations, product ideas, or project discussions, email Dovira Labs.",
+        copy: "For general questions, collaborations, product ideas, or project discussions, contact Dovira Labs.",
         email: "hello@doviralabs.com",
       },
       {
         title: "Product support",
-        copy: "For help with a Dovira Labs product, email support.",
+        copy: "For help with a Dovira Labs product, contact our support team.",
         email: "support@doviralabs.com",
       },
       {
         title: "Privacy requests",
-        copy: "For privacy questions or requests about your information, email our privacy address.",
+        copy: "For privacy questions or requests about your information, contact our privacy address.",
         email: "privacy@doviralabs.com",
       },
     ],
