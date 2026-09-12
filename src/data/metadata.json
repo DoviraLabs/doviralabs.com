@@ -1,38 +1,38 @@
 {
   "/": [
     "We build useful software.",
-    "Dovira Labs is an independent software studio building websites, Android apps, browser tools, business software, SaaS and AI-powered products."
+    "Dovira Labs is an independent software studio building practical web apps, Android apps, browser tools, business software and AI-powered products."
   ],
   "/projects": [
     "Projects",
-    "Explore App Lock and the browser and AI products in development at Dovira Labs."
+    "Explore Dovira Labs products, experiments and work in progress."
   ],
   "/projects/app-lock": [
     "App Lock",
-    "App Lock is an Android app from Dovira Labs. Find the current product status, privacy information and support links."
+    "App Lock is an Android app from Dovira Labs. View its current status, support links and privacy information."
   ],
   "/privacy": [
     "Privacy Policy",
-    "Dovira Labs website privacy information: email communications, website technology, privacy requests, and contact details."
+    "How Dovira Labs handles personal information when you use this website or contact us."
   ],
   "/privacy/app-lock": [
     "App Lock privacy",
-    "App Lock privacy information requires product-level verification before publication. Contact privacy@doviralabs.com for privacy questions."
+    "Current privacy information and contact details for App Lock."
   ],
   "/support": [
     "Support",
-    "Contact support@doviralabs.com for help with Dovira Labs products and find product-specific support information."
+    "Get support for Dovira Labs products and find product-specific help."
   ],
   "/support/app-lock": [
     "App Lock support",
-    "Get App Lock support at support@doviralabs.com and find what to include when reporting an issue."
+    "Get help with App Lock and learn what to include when reporting a problem."
   ],
   "/terms": [
     "Terms of Use",
-    "Terms for using the Dovira Labs website, including acceptable use, intellectual property, product information, and contact details."
+    "Simple terms for using the Dovira Labs website."
   ],
   "/contact": [
     "Contact",
-    "Contact Dovira Labs at hello@doviralabs.com for business inquiries and collaboration, or find product support."
+    "Contact Dovira Labs for business enquiries, collaborations, product support or privacy requests."
   ]
 }
