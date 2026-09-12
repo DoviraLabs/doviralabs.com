@@ -5,11 +5,11 @@ import { products } from "../data/products";
 import { ProductEcosystem } from "../components/ProductEcosystem";
 
 const capabilities = [
-  ["web", "Websites & Web Applications", "Useful digital experiences"],
-  ["mobile", "Android Apps", "Practical mobile tools"],
-  ["browser", "Browser Extensions & Tools", "Simple tools for everyday tasks"],
-  ["cube", "Business Software & SaaS", "Software that supports real work"],
-  ["spark", "AI-powered Products", "Useful AI for everyday workflows"],
+  ["web", "Websites & Web Applications", "Fast, practical experiences for the web"],
+  ["mobile", "Android Apps", "Useful mobile tools built around real needs"],
+  ["browser", "Browser Extensions & Tools", "Tools that make everyday tasks easier"],
+  ["cube", "Business Software & SaaS", "Software designed around real workflows"],
+  ["spark", "AI-powered Products", "Practical AI for useful workflows"],
 ];
 const principles = [
   ["bolt", "Performance", "Fast and reliable"],
@@ -19,7 +19,7 @@ const principles = [
 ];
 
 export function ContactCTA() {
-  return <section className="contact-cta container"><div className="contact-panel"><div><p className="eyebrow">LET’S MAKE SOMETHING USEFUL</p><h2>Have something<br/>useful to build?</h2><p className="muted">Questions about a product, support, or a project you would like to discuss.</p></div><Link className="button" to="/contact">Get in touch <Icon name="arrow" size={18}/></Link></div></section>;
+  return <section className="contact-cta container"><div className="contact-panel"><div><p className="eyebrow">LET’S MAKE SOMETHING USEFUL</p><h2>Have something<br/>useful to build?</h2><p className="muted">Have a question about a product, need support, or want to discuss a project?</p></div><Link className="button" to="/contact">Get in touch <Icon name="arrow" size={18}/></Link></div></section>;
 }
 
 export function Home() {
@@ -29,7 +29,7 @@ export function Home() {
         <div className="hero-copy">
           <p className="eyebrow hero-label"><span className="tiny-dot"/> INDEPENDENT SOFTWARE STUDIO</p>
           <h1>We build<br/>useful <span>software.</span></h1>
-          <p className="hero-description">Dovira Labs is an independent software studio building practical digital products, including web apps, Android apps, browser tools, business software and AI-powered tools.</p>
+          <p className="hero-description">Dovira Labs is an independent software studio building practical digital products, including web apps, Android apps, browser tools, business software and AI-powered products.</p>
           <div className="hero-actions"><Link to="/projects" className="button">Explore our work <Icon name="arrow" size={18}/></Link><Link to="/#about" className="button button-outline">About Dovira Labs</Link></div>
         </div>
         <ProductEcosystem/>
@@ -53,8 +53,8 @@ export function Home() {
       <ol className="build-list" aria-label="Our approach to building"><li className="build-row"><span className="build-number">01</span><div><h3>Understand the problem</h3><p>Start with the task, the friction, and the people involved.</p></div></li><li className="build-row"><span className="build-number">02</span><div><h3>Build a useful first version</h3><p>Keep the scope clear and focus on the most important flow.</p></div></li><li className="build-row"><span className="build-number">03</span><div><h3>Test and improve</h3><p>Check the details, remove friction, and simplify where possible.</p></div></li></ol>
     </section>
     <section className="section container about-grid" id="about">
-      <div><p className="eyebrow section-label"><span className="tiny-dot"/> ABOUT DOVIRA LABS</p><h2>Independent in spirit.<br/>Practical by nature.</h2><p className="about-copy">Dovira Labs is an independent software studio focused on practical, thoughtfully designed software.</p><p className="muted">We look for problems worth solving, keep the scope clear, and build useful products with care.</p><div className="studio-principles"><span>Product thinking</span><span>Considered design</span><span>Careful engineering</span></div></div>
-      <article className="founder-card"><div className="founder-avatar" aria-hidden="true"><span className="founder-initials">DS</span></div><div className="founder-info"><p className="eyebrow">BEHIND THE PRODUCTS</p><h3>Danish Sheikh</h3><p className="founder-role">Founder &amp; Developer, Dovira Labs</p><p className="muted">Danish combines experience in business operations with systems thinking, problem-solving and software development. His focus is practical software that solves clear problems.</p></div></article>
+      <div><p className="eyebrow section-label"><span className="tiny-dot"/> ABOUT DOVIRA LABS</p><h2>Independent by design.<br/>Focused on useful software.</h2><p className="about-copy">Dovira Labs is an independent software studio focused on practical, thoughtfully designed software.</p><p className="muted">We look for problems worth solving, keep the scope clear, and build useful products with care.</p><div className="studio-principles"><span>Product thinking</span><span>Considered design</span><span>Careful engineering</span></div></div>
+      <article className="founder-card"><div className="founder-avatar" aria-hidden="true"><span className="founder-initials">DS</span></div><div className="founder-info"><p className="eyebrow">BEHIND THE PRODUCTS</p><h3>Danish Sheikh</h3><p className="founder-role">Founder &amp; Developer, Dovira Labs</p><p className="muted">I work at the intersection of business, systems, and technology. My background in business operations helps me understand real problems, while software development gives me the tools to turn those problems into practical digital products.</p></div></article>
     </section>
     <ContactCTA/>
   </>;
