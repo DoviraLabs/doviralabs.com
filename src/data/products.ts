@@ -3,9 +3,9 @@ export const products = [
     name: "App Lock",
     category: "Android app",
     description:
-      "An Android app from Dovira Labs. Product details and availability will be added when confirmed.",
+      "An Android app from Dovira Labs, currently being prepared for release.",
     kind: "lock",
-    status: "Details coming soon",
+    status: "In development",
     href: "/projects/app-lock",
   },
   {
