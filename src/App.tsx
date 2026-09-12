@@ -7,7 +7,7 @@ import { AppLock, InformationPage, NotFound, Projects } from "./pages/Pages";
 
 const metadata: Record<string, string[]> = pageMetadata;
 const siteUrl = "https://doviralabs.com";
-const socialImage = `${siteUrl}/brand/app-icon-512.png`;
+const socialImage = `${siteUrl}/dovira-social-preview.png`;
 
 export default function App() {
   const { pathname } = useLocation();
