@@ -13,7 +13,7 @@ export function Projects() {
         <p className="eyebrow">THE PRODUCT COLLECTION</p>
         <h1>Ideas made useful.</h1>
         <p className="page-intro">
-          Products and explorations from Dovira Labs, built with care.
+          Products, experiments and work in progress from Dovira Labs.
         </p>
         <div className="product-showcase mt-14">
           {products.map((product) => (
@@ -37,8 +37,7 @@ export function AppLock() {
           <h1>App Lock</h1>
           <p className="page-intro">An Android app from Dovira Labs.</p>
           <p className="muted">
-            Product details and availability are not yet published. This page
-            will be updated when confirmed information is ready.
+            Full product details and availability will be published when they are confirmed.
           </p>
           <span className="status mt-6">Details coming soon</span>
           <div className="hero-actions">
@@ -71,12 +70,16 @@ const content: Record<
   "/privacy/app-lock": {
     label: "APP LOCK / PRIVACY",
     title: "App Lock privacy",
-    intro: "Product-specific privacy information.",
+    intro: "Privacy information for App Lock.",
     sections: [
-      { title: "App Lock privacy questions & data requests", copy: "For App Lock privacy questions or data requests, email our privacy address and mention App Lock.", email: "privacy@doviralabs.com" },
       {
-        title: "Product verification required",
-        copy: "A verified App Lock privacy policy is not yet available. Permissions, on-device storage, external transmissions, SDKs, retention, and deletion behavior have not been verified for this page. This is a status notice, not a product privacy policy. Product-level verification is required before public release or Play Store publication. The website Privacy Policy does not describe App Lock’s data practices.",
+        title: "Current status",
+        copy: "App Lock is still being prepared for release. Its full product privacy policy will be published before public release. Until then, this page does not describe the app’s final data practices.",
+      },
+      {
+        title: "Privacy questions",
+        copy: "For App Lock privacy questions or data requests, email our privacy address and mention App Lock.",
+        email: "privacy@doviralabs.com",
       },
     ],
     links: [
@@ -88,11 +91,11 @@ const content: Record<
   "/support": {
     label: "HERE TO HELP",
     title: "Product support",
-    intro: "Find support information for Dovira Labs products.",
+    intro: "Support information for Dovira Labs products.",
     sections: [
       {
         title: "Contact support",
-        copy: "For product questions, technical problems, bug reports, or other product-related assistance, email our support address.",
+        copy: "For product questions, technical problems, or bug reports, email our support address.",
         email: "support@doviralabs.com",
       },
     ],
@@ -104,16 +107,16 @@ const content: Record<
   "/support/app-lock": {
     label: "APP LOCK / SUPPORT",
     title: "App Lock support",
-    intro: "Help and support information for App Lock.",
+    intro: "Help and support for App Lock.",
     sections: [
       {
-        title: "Get help with App Lock",
-        copy: "For App Lock support questions or to report an issue, email our support address.",
+        title: "Get help",
+        copy: "For App Lock questions or to report a problem, email our support address.",
         email: "support@doviralabs.com",
       },
       {
-        title: "Preparing a support request",
-        copy: "Include your device model, Android version, app version, and a short description of the issue. Do not include passwords or other sensitive information.",
+        title: "What to include",
+        copy: "Please include your device model, Android version, app version, and a short description of the problem. Do not include passwords or other sensitive information.",
       },
     ],
     links: [
@@ -122,22 +125,25 @@ const content: Record<
     ],
   },
   "/contact": {
-    label: "LET’S CONNECT",
-    title: "Start a conversation.",
-    intro:
-      "Have a product question, need support, or want to explore a collaboration?",
+    label: "CONTACT",
+    title: "Get in touch.",
+    intro: "Questions, support, or a project you would like to discuss?",
     sections: [
       {
-        title: "General inquiries & collaboration",
-        copy: "For general or business inquiries, collaborations, product ideas, or a conversation about working together, email Dovira Labs.",
+        title: "General and business enquiries",
+        copy: "For general questions, collaborations, product ideas, or project discussions, email Dovira Labs.",
         email: "hello@doviralabs.com",
       },
       {
         title: "Product support",
-        copy: "For help with a Dovira Labs product, contact support.",
+        copy: "For help with a Dovira Labs product, email support.",
         email: "support@doviralabs.com",
       },
-      { title: "Privacy & data requests", copy: "For privacy questions or requests concerning your information, contact our privacy address.", email: "privacy@doviralabs.com" },
+      {
+        title: "Privacy requests",
+        copy: "For privacy questions or requests about your information, email our privacy address.",
+        email: "privacy@doviralabs.com",
+      },
     ],
     links: [
       ["Product support", "/support"],
@@ -147,12 +153,20 @@ const content: Record<
 };
 export function InformationPage({ path }: { path: string }) {
   const page = content[path];
+  const formattedDate = page.updated
+    ? new Date(`${page.updated}T00:00:00Z`).toLocaleDateString("en-GB", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        timeZone: "UTC",
+      })
+    : null;
   return (
     <section className="container page-section information-page">
       <p className="eyebrow">{page.label}</p>
       <h1>{page.title}</h1>
       <p className="page-intro">{page.intro}</p>
-      {page.updated && <p className="muted revision-date">Last updated: <time dateTime={page.updated}>September 9, 2026</time></p>}
+      {page.updated && formattedDate && <p className="muted revision-date">Last updated: <time dateTime={page.updated}>{formattedDate}</time></p>}
       <div className="information-content">
         {page.sections.map((section) => (
           <article key={section.title}>
@@ -177,9 +191,9 @@ export function NotFound() {
   return (
     <section className="container page-section">
       <p className="eyebrow">404 / PAGE NOT FOUND</p>
-      <h1>A little off course.</h1>
+      <h1>Page not found.</h1>
       <p className="page-intro">
-        This page doesn’t exist. Let’s get you back to something useful.
+        The page you are looking for does not exist or may have moved.
       </p>
       <Link className="button" to="/">
         Back to home <Icon name="arrow" size={18} />
