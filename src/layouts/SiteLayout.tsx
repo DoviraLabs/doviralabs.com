@@ -110,7 +110,7 @@ export function SiteLayout() {
           </div>
           <div className="footer-bottom">
             <span>© 2026 Dovira Labs</span>
-            <span>Independent by design.</span>
+            <span>Built independently.</span>
             <a href="#main">Back to top ↑</a>
           </div>
         </div>
