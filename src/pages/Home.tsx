@@ -27,9 +27,9 @@ export function Home() {
     <div className="hero-surface">
       <section className="hero container">
         <div className="hero-copy">
-          <p className="eyebrow hero-label"><span className="tiny-dot"/> INDEPENDENT SOFTWARE STUDIO</p>
+          <p className="eyebrow hero-label"><span className="tiny-dot"/> FOUNDER-LED SOFTWARE STUDIO</p>
           <h1>We build<br/>useful <span>software.</span></h1>
-          <p className="hero-description">Dovira Labs is an independent software studio building practical digital products, including web apps, Android apps, browser tools, business software and AI-powered products.</p>
+          <p className="hero-description">Dovira Labs is a founder-led software studio building practical digital products, including web apps, Android apps, browser tools, business software and AI-powered products.</p>
           <div className="hero-actions"><Link to="/projects" className="button">Explore our work <Icon name="arrow" size={18}/></Link><Link to="/#about" className="button button-outline">About Dovira Labs</Link></div>
         </div>
         <ProductEcosystem/>
@@ -53,7 +53,7 @@ export function Home() {
       <ol className="build-list" aria-label="Our approach to building"><li className="build-row"><span className="build-number">01</span><div><h3>Understand the problem</h3><p>Start with the task, the friction, and the people involved.</p></div></li><li className="build-row"><span className="build-number">02</span><div><h3>Build a useful first version</h3><p>Keep the scope clear and focus on the most important flow.</p></div></li><li className="build-row"><span className="build-number">03</span><div><h3>Test and improve</h3><p>Check the details, remove friction, and simplify where possible.</p></div></li></ol>
     </section>
     <section className="section container about-grid" id="about">
-      <div><p className="eyebrow section-label"><span className="tiny-dot"/> ABOUT DOVIRA LABS</p><h2>Independent by design.<br/>Focused on useful software.</h2><p className="about-copy">Dovira Labs is an independent software studio focused on practical, thoughtfully designed software.</p><p className="muted">We look for problems worth solving, keep the scope clear, and build useful products with care.</p><div className="studio-principles"><span>Product thinking</span><span>Considered design</span><span>Careful engineering</span></div></div>
+      <div><p className="eyebrow section-label"><span className="tiny-dot"/> ABOUT DOVIRA LABS</p><h2>Founder-led.<br/>Focused on useful software.</h2><p className="about-copy">Dovira Labs is a founder-led software studio focused on practical, thoughtfully designed software.</p><p className="muted">We bring together product thinking, design and engineering to solve real problems and build useful digital products with care.</p><div className="studio-principles"><span>Product thinking</span><span>Considered design</span><span>Careful engineering</span></div></div>
       <article className="founder-card"><div className="founder-avatar" aria-hidden="true"><span className="founder-initials">DS</span></div><div className="founder-info"><p className="eyebrow">BEHIND THE PRODUCTS</p><h3>Danish Sheikh</h3><p className="founder-role">Founder &amp; Developer, Dovira Labs</p><p className="muted">I work at the intersection of business, systems, and technology. My background in business operations helps me understand real problems, while software development gives me the tools to turn those problems into practical digital products.</p></div></article>
     </section>
     <ContactCTA/>
