@@ -6,27 +6,84 @@ import { Home } from "./pages/Home";
 import { AppLock, InformationPage, NotFound, Projects } from "./pages/Pages";
 
 const metadata: Record<string, string[]> = pageMetadata;
+const siteUrl = "https://doviralabs.com";
+const socialImage = `${siteUrl}/brand/app-icon-512.png`;
+
 export default function App() {
   const { pathname } = useLocation();
+
   useEffect(() => {
     const route = pathname.replace(/\/+$/, "") || "/";
-    const [title, description] = metadata[route] ?? ["Page not found", "This page could not be found. Explore Dovira Labs projects or return to the homepage."];
-    document.title = `Dovira Labs — ${title}`;
+    const knownRoute = Boolean(metadata[route]);
+    const [title, description] = metadata[route] ?? [
+      "Page not found",
+      "This page could not be found. Explore Dovira Labs projects or return to the homepage.",
+    ];
+    const fullTitle = `Dovira Labs — ${title}`;
+    const canonicalUrl = `${siteUrl}${route === "/" ? "/" : route}`;
+
+    document.title = fullTitle;
     document
       .querySelector('meta[name="description"]')
       ?.setAttribute("content", description);
     document
       .querySelector('meta[property="og:title"]')
-      ?.setAttribute("content", document.title);
+      ?.setAttribute("content", fullTitle);
     document
       .querySelector('meta[property="og:description"]')
       ?.setAttribute("content", description);
     document
+      .querySelector('meta[property="og:url"]')
+      ?.setAttribute("content", canonicalUrl);
+    document
+      .querySelector('meta[property="og:image"]')
+      ?.setAttribute("content", socialImage);
+    document
+      .querySelector('meta[name="twitter:title"]')
+      ?.setAttribute("content", fullTitle);
+    document
+      .querySelector('meta[name="twitter:description"]')
+      ?.setAttribute("content", description);
+    document
+      .querySelector('meta[name="twitter:image"]')
+      ?.setAttribute("content", socialImage);
+    document
       .querySelector('link[rel="canonical"]')
-      ?.setAttribute("href", `https://doviralabs.com${route}`);
-    document.querySelector('meta[property="og:url"]')?.setAttribute("content", `https://doviralabs.com${route}`);
-    document.querySelector('meta[name="robots"]')?.setAttribute("content", metadata[route] ? "index, follow" : "noindex, follow");
+      ?.setAttribute("href", canonicalUrl);
+    document
+      .querySelector('meta[name="robots"]')
+      ?.setAttribute("content", knownRoute ? "index, follow" : "noindex, follow");
+
+    const existingProductSchema = document.getElementById("product-structured-data");
+    existingProductSchema?.remove();
+
+    if (route === "/projects/app-lock") {
+      const script = document.createElement("script");
+      script.id = "product-structured-data";
+      script.type = "application/ld+json";
+      script.text = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        name: "App Lock",
+        applicationCategory: "UtilitiesApplication",
+        operatingSystem: "Android",
+        url: `${siteUrl}/projects/app-lock`,
+        publisher: {
+          "@type": "Organization",
+          name: "Dovira Labs",
+          url: `${siteUrl}/`,
+        },
+        description:
+          "App Lock is an Android app from Dovira Labs. Full product details and availability will be published when confirmed.",
+      });
+      document.head.appendChild(script);
+    }
+
+    return () => {
+      document.getElementById("product-structured-data")?.remove();
+    };
   }, [pathname]);
+
   return (
     <Routes>
       <Route element={<SiteLayout />}>
