@@ -1,0 +1,17 @@
+# Dovira Labs
+
+Dovira Labs is an independent software studio building practical digital products, including web apps, Android apps, browser tools, business software, and AI-powered products.
+
+## Important links
+
+- [Homepage](https://doviralabs.com/)
+- [Projects](https://doviralabs.com/projects)
+- [App Lock](https://doviralabs.com/projects/app-lock)
+- [About](https://doviralabs.com/#about)
+- [Engineering](https://doviralabs.com/#engineering)
+- [Contact](https://doviralabs.com/contact)
+- [Support](https://doviralabs.com/support)
+- [Privacy](https://doviralabs.com/privacy)
+- [Terms](https://doviralabs.com/terms)
+- [Sitemap](https://doviralabs.com/sitemap.xml)
+- [YouTube](https://www.youtube.com/@DoviraLabs)
