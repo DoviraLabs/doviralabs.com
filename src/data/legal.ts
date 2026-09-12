@@ -20,7 +20,7 @@ export const legalPages: Record<string, { label: string; title: string; intro: s
       },
       {
         "title": "Technical information",
-        "copy": "When you visit the website, your browser and the services used to deliver the site process normal technical information needed to serve pages, such as an IP address, request headers, requested URLs, and connection data. The website does not include a separate advertising tracker or third-party analytics integration. Hosting, network, security, and delivery providers may process technical information as part of providing their services."
+        "copy": "When you visit the website, your browser and the services used to deliver the site process normal technical information needed to serve pages, such as an IP address, request headers, requested URLs, and connection data. The website code does not include advertising trackers or marketing pixels. Hosting, network, security, delivery, and performance services may process technical information as part of providing and monitoring the website."
       },
       {
         "title": "Cookies and tracking",
