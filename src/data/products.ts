@@ -3,7 +3,7 @@ export const products = [
     name: "App Lock",
     category: "Android app",
     description:
-      "An Android app from Dovira Labs. Full product details and availability will be published when confirmed.",
+      "An Android app from Dovira Labs. Product details and availability will be added when confirmed.",
     kind: "lock",
     status: "Details coming soon",
     href: "/projects/app-lock",
@@ -12,7 +12,7 @@ export const products = [
     name: "Browser Tool",
     category: "Browser extension · Concept",
     description:
-      "Exploring small browser tools designed to make everyday tasks simpler.",
+      "Exploring focused browser tools designed to make everyday tasks easier.",
     kind: "browser",
     status: "In development",
   },
