@@ -35,11 +35,11 @@ export function AppLock() {
         <div>
           <p className="eyebrow">ANDROID APP / DOVIRA LABS</p>
           <h1>App Lock</h1>
-          <p className="page-intro">An Android app from Dovira Labs.</p>
+          <p className="page-intro">An Android app from Dovira Labs, currently being prepared for release.</p>
           <p className="muted">
-            Product details and availability will be added when confirmed.
+            Product details and availability will be published closer to release.
           </p>
-          <span className="status mt-6">Details coming soon</span>
+          <span className="status mt-6">In development</span>
           <div className="hero-actions">
             <Link to="/support/app-lock" className="button">
               Product support <Icon name="arrow" size={18} />
@@ -95,7 +95,7 @@ const content: Record<
     sections: [
       {
         title: "Contact support",
-        copy: "For product questions, technical problems, or bug reports, email our support team.",
+        copy: "For product questions, technical problems, or bug reports, contact Dovira Labs support.",
         email: "support@doviralabs.com",
       },
     ],
@@ -111,7 +111,7 @@ const content: Record<
     sections: [
       {
         title: "Get help",
-        copy: "For App Lock questions or to report a problem, email our support team.",
+        copy: "For App Lock questions or to report a problem, contact Dovira Labs support.",
         email: "support@doviralabs.com",
       },
       {
@@ -136,7 +136,7 @@ const content: Record<
       },
       {
         title: "Product support",
-        copy: "For help with a Dovira Labs product, contact our support team.",
+        copy: "For help with a Dovira Labs product, contact Dovira Labs support.",
         email: "support@doviralabs.com",
       },
       {
