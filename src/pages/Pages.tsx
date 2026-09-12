@@ -10,10 +10,10 @@ export function Projects() {
   return (
     <>
       <section className="container page-section">
-        <p className="eyebrow">THE PRODUCT COLLECTION</p>
+        <p className="eyebrow">PROJECTS & PRODUCTS</p>
         <h1>Ideas made useful.</h1>
         <p className="page-intro">
-          Products, experiments and work in progress from Dovira Labs.
+          A collection of products, experiments, and work in progress from Dovira Labs.
         </p>
         <div className="product-showcase mt-14">
           {products.map((product) => (
