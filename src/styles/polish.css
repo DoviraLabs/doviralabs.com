@@ -1,0 +1,26 @@
+/* Final presentation refinements layered on top of the main stylesheet. */
+
+.founder-kicker {
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.09em;
+  color: #27466f;
+  margin-bottom: 12px;
+}
+
+.founder-role strong {
+  font-weight: 700;
+  color: #18263a;
+}
+
+.page-section > .eyebrow {
+  font-weight: 650;
+  letter-spacing: 0.11em;
+}
+
+@media (min-width: 1100px) {
+  .capability-strip {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
