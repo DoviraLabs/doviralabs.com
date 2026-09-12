@@ -11,7 +11,7 @@ export function ProductCard({product, headingLevel = 3}: {product:(typeof produc
       {featured ? <p className="product-category"><span/>Android App</p> : <div className="upcoming-heading"><span className="product-symbol" aria-hidden="true"><Icon name={product.kind} size={26}/></span><span className="status"><span/>IN DEVELOPMENT</span></div>}
       <Heading>{"href" in product ? <Link to={product.href} className="product-link">{product.name}</Link> : product.name}</Heading>
       <p className="muted">{product.description}</p>
-      {"href" in product ? <Link to={product.href} className="button product-cta" aria-label={`Learn more about ${product.name}`}>Learn more <Icon name="arrow" size={17}/></Link> : <p className="upcoming-note">Product concept · Details to follow</p>}
+      {"href" in product ? <Link to={product.href} className="button product-cta">Learn more about {product.name} <Icon name="arrow" size={17}/></Link> : <p className="upcoming-note">Product concept · Details to follow</p>}
     </div>
   </article>;
 }
