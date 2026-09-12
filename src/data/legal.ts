@@ -48,7 +48,7 @@ export const legalPages: Record<string, { label: string; title: string; intro: s
   "/terms": {
     "label": "STUDIO INFORMATION",
     "title": "Terms of Use",
-    "intro": "Terms for using the Dovira Labs website and related services.",
+    "intro": "Terms for using the Dovira Labs website.",
     "updated": "2026-09-13",
     "sections": [
       {
