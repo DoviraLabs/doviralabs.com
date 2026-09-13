@@ -19,20 +19,24 @@ export const legalPages: Record<string, { label: string; title: string; intro: s
         "copy": "We use information you send to reply to enquiries, discuss potential work, provide product support, investigate reported issues, and respond to privacy requests. We do not add you to a marketing list simply because you contact us."
       },
       {
-        "title": "Website data and cookies",
-        "copy": "The services used to deliver and protect this website may process basic technical information needed to operate the site. We do not use the website for advertising or behavioural profiling, and the current website does not set non-essential cookies."
+        "title": "Website analytics",
+        "copy": "We use Google Analytics to understand website traffic and how visitors use the site, such as which pages are viewed and how visitors arrive. This information helps us understand and improve the website. Google may process technical and usage information in accordance with its own privacy terms."
+      },
+      {
+        "title": "Website operation",
+        "copy": "The services used to deliver and protect this website may process basic technical information needed to operate, secure, and measure the site. We do not use the website for behavioural advertising or profiling."
       },
       {
         "title": "Service providers",
-        "copy": "We use service providers to help operate the website and manage email. They may process information only as needed to provide those services and under their own applicable terms and privacy information. Information may also be disclosed where required by law."
+        "copy": "We use service providers to help operate the website, measure website usage, and manage email. They may process information only as needed to provide those services and under their own applicable terms and privacy information. Information may also be disclosed where required by law."
       },
       {
         "title": "How long we keep information",
-        "copy": "We keep correspondence only for as long as reasonably needed for the enquiry, support, ongoing communication, record-keeping, or legal obligations."
+        "copy": "We keep correspondence only for as long as reasonably needed for the enquiry, support, ongoing communication, record-keeping, or legal obligations. Analytics information is retained according to the settings and terms of the analytics service."
       },
       {
         "title": "Your privacy choices",
-        "copy": "You may contact Dovira Labs to ask about personal information connected with your enquiry or to request access, correction, or deletion where applicable. Please provide enough detail for us to identify the relevant correspondence without sending unnecessary sensitive information.",
+        "copy": "You may contact Dovira Labs to ask about personal information connected with your enquiry or to request access, correction, or deletion where applicable. You can also use browser privacy controls or blocking tools to limit analytics where supported. Please provide enough detail for us to identify the relevant correspondence without sending unnecessary sensitive information.",
         "email": "privacy@doviralabs.com"
       },
       {
