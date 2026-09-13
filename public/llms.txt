@@ -1,6 +1,6 @@
 # Dovira Labs
 
-Dovira Labs is an independent software studio building practical digital products, including web apps, Android apps, browser tools, business software, and AI-powered products.
+Dovira Labs is a founder-led software studio building practical digital products, including web apps, Android apps, browser tools, business software, and AI-powered products.
 
 ## Important links
 
