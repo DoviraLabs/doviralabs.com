@@ -6,7 +6,7 @@ const journey = [
     year: "2012",
     title: "KodeClub.com",
     label: "Early web project",
-    copy: "One of my earliest web projects, KodeClub.com, is documented online by 2012 in historical technology-forum records within the online data-entry and CAPTCHA-software ecosystem.",
+    copy: "One of my earliest web projects, KodeClub.com, is documented online by July 2012 in historical technology-forum records. It marks an early stage of my interest in websites, digital tools, and online services.",
   },
   {
     year: "Learning & building",
@@ -73,7 +73,6 @@ export function Founder() {
             </article>
           ))}
         </div>
-        <p className="founder-evidence-note">Historical note: KodeClub.com is documented in a July 2012 technology-forum record. The exact original domain-registration date is not presented here as a verified fact.</p>
       </section>
 
       <section className="founder-background-band">
