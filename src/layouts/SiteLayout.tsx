@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { Icon } from "../components/Icon";
+import { AnalyticsConsent } from "../components/AnalyticsConsent";
 
 export function SiteLayout() {
   const [open, setOpen] = useState(false);
@@ -106,6 +107,7 @@ export function SiteLayout() {
                   {label}
                 </NavLink>
               ))}
+              <AnalyticsConsent />
             </nav>
           </div>
           <div className="footer-bottom">

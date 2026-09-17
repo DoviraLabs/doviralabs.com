@@ -2,13 +2,38 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQXMD4F5YT"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+      window.analyticsConsent = {
+        choice: null,
+        set: function(choice) {
+          this.choice = choice;
+          gtag('consent', 'update', {
+            analytics_storage: choice === 'accepted' ? 'granted' : 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied'
+          });
+          try { localStorage.setItem('dovira-analytics-consent', choice); } catch (_) {}
+        }
+      };
+      try {
+        var savedConsent = localStorage.getItem('dovira-analytics-consent');
+        if (savedConsent === 'accepted' || savedConsent === 'rejected') {
+          window.analyticsConsent.set(savedConsent);
+        }
+      } catch (_) {}
       gtag('js', new Date());
       gtag('config', 'G-SQXMD4F5YT');
     </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQXMD4F5YT"></script>
 
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

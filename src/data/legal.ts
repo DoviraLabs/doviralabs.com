@@ -4,7 +4,7 @@ export const legalPages: Record<string, { label: string; title: string; intro: s
     "label": "STUDIO INFORMATION",
     "title": "Privacy Policy",
     "intro": "How Dovira Labs handles personal information when you use this website or contact us.",
-    "updated": "2026-09-13",
+    "updated": "2026-09-17",
     "sections": [
       {
         "title": "About this policy",
@@ -20,7 +20,7 @@ export const legalPages: Record<string, { label: string; title: string; intro: s
       },
       {
         "title": "Website analytics",
-        "copy": "We use Google Analytics to understand website traffic and how visitors use the site, such as which pages are viewed and how visitors arrive. This information helps us understand and improve the website. Google may process technical and usage information in accordance with its own privacy terms."
+        "copy": "We use Google Analytics to understand website usage and improve the site. You can accept or reject analytics. Your choice is remembered in your browser, and you can change it at any time using Analytics preferences in the footer."
       },
       {
         "title": "Website operation",
