@@ -5,20 +5,20 @@ const journey = [
   {
     year: "2012",
     title: "KodeClub.com",
-    label: "Early web project",
-    copy: "One of my earliest web projects, KodeClub.com, is documented online by July 2012 in historical technology-forum records. It marks an early stage of my interest in websites, digital tools, and online services.",
+    label: "Where the journey started",
+    copy: "KodeClub.com was one of the projects that shaped my early web journey. By 2012, I was already experimenting with websites, online tools, and the practical side of building for the internet. It was an important learning ground: not just for creating pages, but for thinking about how people use digital services, how workflows fit together, and how software can make a task simpler. That early curiosity became the foundation for the broader product and software work I continue today.",
   },
   {
     year: "Learning & building",
     title: "From websites to systems",
     label: "Expanding the toolkit",
-    copy: "Over time, my interests expanded across web development, Android apps, browser tools, business software, automation, and practical uses of AI.",
+    copy: "What began with web projects gradually expanded into a wider interest in how digital products are designed, built, and improved. Over time I explored web development, Android apps, browser tools, business software, automation, and practical uses of AI — learning by building and by solving the kinds of problems that appear in real work.",
   },
   {
     year: "Today",
     title: "Dovira Labs",
     label: "Founder-led software studio",
-    copy: "Dovira Labs brings those interests together around one simple goal: turning ideas and real problems into useful digital products.",
+    copy: "Dovira Labs brings that journey together with a clearer focus: understand the problem first, then build the simplest useful product around it. Today the work spans web, mobile, browser tools, business software, automation, and AI-powered products — connected by the same practical approach that started with those early experiments.",
   },
 ];
 
