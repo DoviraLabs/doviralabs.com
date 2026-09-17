@@ -33,7 +33,7 @@ export function SiteLayout() {
     );
     document
       .querySelectorAll(
-        ".section-heading, .product-card, .category-grid article, .building, .engineering-grid, .about-grid, .contact-panel",
+        ".section-heading, .product-card, .category-grid article, .building, .engineering-grid, .about-grid, .contact-panel, .founder-timeline-item, .founder-focus-grid div",
       )
       .forEach((element) => observer.observe(element));
     return () => observer.disconnect();
@@ -73,7 +73,7 @@ export function SiteLayout() {
             }}
           >
             <NavLink to="/projects">Projects</NavLink>
-            <Link to="/#about" aria-current={location.pathname === "/" && location.hash === "#about" ? "location" : undefined}>About</Link>
+            <NavLink to="/founder">Founder</NavLink>
             <Link to="/#engineering" aria-current={location.pathname === "/" && location.hash === "#engineering" ? "location" : undefined}>Engineering</Link>
             <NavLink to="/contact">Contact</NavLink>
             <Link className="button button-small" to="/projects">
@@ -98,6 +98,7 @@ export function SiteLayout() {
             <nav aria-label="Footer navigation">
               {[
                 ["Projects", "/projects"],
+                ["Founder", "/founder"],
                 ["Privacy", "/privacy"],
                 ["Terms", "/terms"],
                 ["Support", "/support"],

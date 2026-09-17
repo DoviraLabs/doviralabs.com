@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { SiteLayout } from "./layouts/SiteLayout";
 import { Home } from "./pages/Home";
+import { Founder } from "./pages/Founder";
 import { AppLock, InformationPage, NotFound, Projects } from "./pages/Pages";
 
 const metadata: Record<string, string[]> = pageMetadata;
@@ -88,6 +89,7 @@ export default function App() {
     <Routes>
       <Route element={<SiteLayout />}>
         <Route index element={<Home />} />
+        <Route path="founder" element={<Founder />} />
         <Route path="projects" element={<Projects />} />
         <Route path="projects/app-lock" element={<AppLock />} />
         {[
