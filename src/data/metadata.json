@@ -3,13 +3,17 @@
     "We build useful software.",
     "Dovira Labs is a founder-led software studio building practical web apps, Android apps, browser tools, business software and AI-powered products."
   ],
+  "/replypilot-ai": [
+    "ReplyPilot AI — Your Voice. Your Audience. Your AI.",
+    "ReplyPilot AI is an official YouTube comment management platform and Chrome extension developed by Dovira Labs. Manage comments, generate 3-option AI suggestions, and publish approved replies."
+  ],
   "/founder": [
     "Founder — Danish Sheikh",
     "Meet Danish Sheikh, founder and developer at Dovira Labs, and explore the journey from early web projects to practical software, automation and AI-powered products."
   ],
   "/projects": [
     "Projects",
-    "Explore Dovira Labs products, experiments and work in progress."
+    "Explore Dovira Labs products, creator tools, experiments and work in progress."
   ],
   "/projects/app-lock": [
     "App Lock",
@@ -23,17 +27,33 @@
     "App Lock privacy",
     "Current privacy information and contact details for App Lock."
   ],
+  "/privacy/replypilot-ai": [
+    "ReplyPilot AI Privacy Policy",
+    "Official Privacy Policy for ReplyPilot AI covering Google OAuth, YouTube Data API access, and user data protection."
+  ],
+  "/terms": [
+    "Terms of Use",
+    "Terms for using the Dovira Labs website."
+  ],
+  "/terms/replypilot-ai": [
+    "ReplyPilot AI Terms of Service",
+    "Official Terms of Service for ReplyPilot AI covering creator responsibilities and YouTube API compliance."
+  ],
   "/support": [
-    "Support",
+    "Support Directory",
     "Get support for Dovira Labs products and find product-specific help."
   ],
   "/support/app-lock": [
     "App Lock support",
     "Get help with App Lock and learn what to include when reporting a problem."
   ],
-  "/terms": [
-    "Terms of Use",
-    "Terms for using the Dovira Labs website."
+  "/support/replypilot-ai": [
+    "ReplyPilot AI Support & Guide",
+    "Setup instructions, FAQs, and technical troubleshooting for ReplyPilot AI and the ReplyPilot Studio Chrome extension."
+  ],
+  "/data-deletion": [
+    "Google User Data Deletion",
+    "How to disconnect your YouTube channel and request complete permanent deletion of all stored Google user data from ReplyPilot AI."
   ],
   "/contact": [
     "Contact",

@@ -1,4 +1,4 @@
-import { legalPages } from "../data/legal";
+import { legalPages, type LegalPageConfig } from "../data/legal";
 import { Link } from "react-router-dom";
 import { products } from "../data/products";
 import { ProductCard } from "../components/ProductCard";
@@ -13,7 +13,7 @@ export function Projects() {
         <p className="eyebrow">PROJECTS & PRODUCTS</p>
         <h1>Ideas made useful.</h1>
         <p className="page-intro">
-          A collection of products, experiments, and work in progress from Dovira Labs.
+          A collection of software products, creator tools, and digital platforms from Dovira Labs.
         </p>
         <div className="product-showcase mt-14">
           {products.map((product) => (
@@ -25,6 +25,7 @@ export function Projects() {
     </>
   );
 }
+
 export function AppLock() {
   return (
     <section className="container page-section">
@@ -55,22 +56,13 @@ export function AppLock() {
   );
 }
 
-const content: Record<
-  string,
-  {
-    label: string;
-    title: string;
-    intro: string;
-    updated?: string;
-    sections: { title: string; copy: string; email?: string }[];
-    links?: [string, string][];
-  }
-> = {
+const content: Record<string, LegalPageConfig> = {
   "/privacy": legalPages["/privacy"],
   "/privacy/app-lock": {
     label: "APP LOCK / PRIVACY",
     title: "App Lock privacy",
     intro: "Privacy information for App Lock.",
+    updated: "2026-09-17",
     sections: [
       {
         title: "Current status",
@@ -88,26 +80,16 @@ const content: Record<
     ],
   },
   "/terms": legalPages["/terms"],
-  "/support": {
-    label: "HERE TO HELP",
-    title: "Product support",
-    intro: "Support for Dovira Labs products.",
-    sections: [
-      {
-        title: "Contact support",
-        copy: "For product questions, technical problems, or bug reports, contact Dovira Labs support.",
-        email: "support@doviralabs.com",
-      },
-    ],
-    links: [
-      ["App Lock support", "/support/app-lock"],
-      ["Explore products", "/projects"],
-    ],
-  },
+  "/privacy/replypilot-ai": legalPages["/privacy/replypilot-ai"],
+  "/terms/replypilot-ai": legalPages["/terms/replypilot-ai"],
+  "/support/replypilot-ai": legalPages["/support/replypilot-ai"],
+  "/data-deletion": legalPages["/data-deletion"],
+  "/support": legalPages["/support"],
   "/support/app-lock": {
     label: "APP LOCK / SUPPORT",
     title: "App Lock support",
     intro: "Help and support for App Lock.",
+    updated: "2026-09-17",
     sections: [
       {
         title: "Get help",
@@ -128,6 +110,7 @@ const content: Record<
     label: "CONTACT",
     title: "Get in touch.",
     intro: "Have a question, need support, or want to discuss a project?",
+    updated: "2026-11-25",
     sections: [
       {
         title: "General and business enquiries",
@@ -151,8 +134,13 @@ const content: Record<
     ],
   },
 };
+
 export function InformationPage({ path }: { path: string }) {
   const page = content[path];
+  if (!page) {
+    return <NotFound />;
+  }
+
   const formattedDate = page.updated
     ? new Date(`${page.updated}T00:00:00Z`).toLocaleDateString("en-GB", {
         day: "numeric",
@@ -161,18 +149,34 @@ export function InformationPage({ path }: { path: string }) {
         timeZone: "UTC",
       })
     : null;
+
   return (
     <section className="container page-section information-page">
       <p className="eyebrow">{page.label}</p>
       <h1>{page.title}</h1>
       <p className="page-intro">{page.intro}</p>
-      {page.updated && formattedDate && <p className="muted revision-date">Last updated: <time dateTime={page.updated}>{formattedDate}</time></p>}
+      {page.updated && formattedDate && (
+        <p className="muted revision-date">
+          Last updated: <time dateTime={page.updated}>{formattedDate}</time>
+        </p>
+      )}
       <div className="information-content">
         {page.sections.map((section) => (
           <article key={section.title}>
             <h2>{section.title}</h2>
-            <p className="muted">{section.copy}</p>
-            {section.email && <a className="text-link email-link" href={`mailto:${section.email}`}>{section.email}</a>}
+            <p className="information-copy">{section.copy}</p>
+            {section.bullets && section.bullets.length > 0 && (
+              <ul className="information-list">
+                {section.bullets.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+            )}
+            {section.email && (
+              <a className="text-link email-link" href={`mailto:${section.email}`}>
+                {section.email}
+              </a>
+            )}
           </article>
         ))}
       </div>
@@ -187,6 +191,7 @@ export function InformationPage({ path }: { path: string }) {
     </section>
   );
 }
+
 export function NotFound() {
   return (
     <section className="container page-section">

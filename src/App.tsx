@@ -4,6 +4,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { SiteLayout } from "./layouts/SiteLayout";
 import { Home } from "./pages/Home";
 import { Founder } from "./pages/Founder";
+import { ReplyPilotPage } from "./pages/ReplyPilotPage";
 import { AppLock, InformationPage, NotFound, Projects } from "./pages/Pages";
 
 const metadata: Record<string, string[]> = pageMetadata;
@@ -58,7 +59,27 @@ export default function App() {
     const existingProductSchema = document.getElementById("product-structured-data");
     existingProductSchema?.remove();
 
-    if (route === "/projects/app-lock") {
+    if (route === "/replypilot-ai") {
+      const script = document.createElement("script");
+      script.id = "product-structured-data";
+      script.type = "application/ld+json";
+      script.text = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        name: "ReplyPilot AI",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web, Chrome Extension",
+        url: `${siteUrl}/replypilot-ai`,
+        publisher: {
+          "@type": "Organization",
+          name: "Dovira Labs",
+          url: `${siteUrl}/`,
+        },
+        description:
+          "ReplyPilot AI is an AI-powered YouTube comment management platform and Chrome extension developed by Dovira Labs.",
+      });
+      document.head.appendChild(script);
+    } else if (route === "/projects/app-lock") {
       const script = document.createElement("script");
       script.id = "product-structured-data";
       script.type = "application/ld+json";
@@ -75,7 +96,7 @@ export default function App() {
           url: `${siteUrl}/`,
         },
         description:
-          "App Lock is an Android app from Dovira Labs. Full product details and availability will be published when confirmed.",
+          "App Lock is an Android app from Dovira Labs currently being prepared for release.",
       });
       document.head.appendChild(script);
     }
@@ -89,20 +110,25 @@ export default function App() {
     <Routes>
       <Route element={<SiteLayout />}>
         <Route index element={<Home />} />
+        <Route path="replypilot-ai" element={<ReplyPilotPage />} />
         <Route path="founder" element={<Founder />} />
         <Route path="projects" element={<Projects />} />
         <Route path="projects/app-lock" element={<AppLock />} />
         {[
           "/privacy",
           "/privacy/app-lock",
+          "/privacy/replypilot-ai",
+          "/terms",
+          "/terms/replypilot-ai",
           "/support",
           "/support/app-lock",
-          "/terms",
+          "/support/replypilot-ai",
+          "/data-deletion",
           "/contact",
         ].map((path) => (
           <Route
             key={path}
-            path={path}
+            path={path.slice(1)}
             element={<InformationPage path={path} />}
           />
         ))}

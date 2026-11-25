@@ -24,3 +24,365 @@
     gap: 16px;
   }
 }
+
+/* Legal & Information Page Styles — High Contrast on White Surface */
+.information-copy {
+  color: #243247;
+  font-size: 15px;
+  line-height: 1.75;
+  max-width: 740px;
+}
+
+.information-list {
+  margin-top: 14px;
+  padding-left: 20px;
+  list-style-type: disc;
+  max-width: 740px;
+  display: grid;
+  gap: 8px;
+}
+
+.information-list li {
+  color: #33445e;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.information-action {
+  margin-top: 18px;
+}
+
+/* Footer Meta Links — Crisp Readable Contrast */
+.footer-company-meta {
+  margin-top: 10px;
+  display: grid;
+  gap: 4px;
+}
+
+.footer-company-meta p {
+  margin: 0;
+  font-size: 12px;
+  color: #485b7a;
+}
+
+.footer-company-meta a {
+  color: #0b1018;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: #cbd8ec;
+  text-underline-offset: 3px;
+}
+
+.footer-company-meta a:hover {
+  color: #064cff;
+  text-decoration-color: #064cff;
+}
+
+/* ReplyPilot AI Product Page Components */
+.rp-trust-strip {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #33445e;
+}
+
+.rp-trust-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #149653;
+  display: inline-block;
+}
+
+.rp-preview-card {
+  background: #ffffff;
+  border: 1px solid #dce5f2;
+  border-radius: 12px;
+  box-shadow: 0 18px 40px #18345e12;
+  overflow: hidden;
+}
+
+.rp-preview-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #f6f9fe;
+  border-bottom: 1px solid #e4ecf7;
+}
+
+.rp-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #cbd5e1;
+}
+
+.rp-preview-title {
+  margin-left: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #485b7a;
+  letter-spacing: 0.02em;
+}
+
+.rp-preview-body {
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+}
+
+.rp-mock-comment {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #edf2f9;
+}
+
+.rp-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #eef4ff;
+  border: 1px solid #d5e3fc;
+  color: #064cff;
+  font-size: 13px;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.rp-author {
+  font-size: 12px;
+  font-weight: 600;
+  color: #0b1018;
+}
+
+.rp-comment-text {
+  font-size: 13px;
+  color: #33445e;
+  margin-top: 3px;
+  line-height: 1.5;
+}
+
+.rp-script-tag {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #064cff;
+  background: #eef4ff;
+  border: 1px solid #dce7fd;
+  border-radius: 4px;
+  padding: 2px 7px;
+}
+
+.rp-suggestions-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #485b7a;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+}
+
+.rp-suggestion-item {
+  background: #f8fbff;
+  border: 1px solid #e2eaf6;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+}
+
+.rp-suggestion-item:last-child {
+  margin-bottom: 0;
+}
+
+.rp-suggestion-item strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 650;
+  color: #064cff;
+  margin-bottom: 2px;
+}
+
+.rp-suggestion-item p {
+  font-size: 12px;
+  color: #1e293b;
+  line-height: 1.45;
+}
+
+.rp-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.rp-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.rp-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.rp-card {
+  background: #ffffff;
+  border: 1px solid #dce5f2;
+  border-radius: 10px;
+  padding: 26px;
+}
+
+.rp-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+  background: #eef4ff;
+  border: 1px solid #d5e3fc;
+  color: #064cff;
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+}
+
+.rp-card h3,
+.rp-card h4 {
+  color: #0b1018;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+}
+
+.rp-card h3 {
+  font-size: 19px;
+}
+
+.rp-card h4 {
+  font-size: 16px;
+}
+
+.rp-card-copy {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #33445e;
+}
+
+.rp-checklist {
+  margin-top: 16px;
+  padding-left: 18px;
+  list-style-type: disc;
+  display: grid;
+  gap: 7px;
+}
+
+.rp-checklist li {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #243247;
+}
+
+.rp-dark-card {
+  background: #121d2e;
+  border: 1px solid #22324c;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.rp-dark-card h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.rp-dark-card p {
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+.rp-example-quote {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: #0b131e;
+  border: 1px solid #1e2d45;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #e2e8f0;
+}
+
+.rp-byok-banner {
+  background: linear-gradient(110deg, #eff5ff, #f8fbff);
+  border: 1px solid #d5e3f8;
+  border-radius: 12px;
+  padding: 32px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.rp-byok-banner h2 {
+  font-size: 26px;
+  color: #0b1018;
+  margin-top: 10px;
+}
+
+.rp-byok-banner p {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.68;
+  color: #33445e;
+  max-width: 660px;
+}
+
+.rp-compliance-bar {
+  margin-top: 32px;
+  padding: 24px 28px;
+  background: #f8fbff;
+  border: 1px solid #dce5f2;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.rp-compliance-bar h3 {
+  font-size: 16px;
+  color: #0b1018;
+}
+
+.rp-compliance-bar p {
+  font-size: 13px;
+  color: #485b7a;
+  margin-top: 4px;
+}
+
+@media (max-width: 999px) {
+  .rp-grid-2,
+  .rp-grid-3,
+  .rp-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .rp-byok-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+  }
+}

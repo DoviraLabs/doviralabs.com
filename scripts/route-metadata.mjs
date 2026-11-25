@@ -27,6 +27,20 @@ for (const [route, [title, description]] of Object.entries(pages)) {
     },
   ];
 
+  if (route === '/replypilot-ai') {
+    graph.push({
+      '@type': 'SoftwareApplication',
+      '@id': `${url}#software`,
+      name: 'ReplyPilot AI',
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Web, Chrome Extension',
+      url,
+      publisher: { '@id': 'https://doviralabs.com/#organization' },
+      description: 'ReplyPilot AI is an official YouTube comment management platform and Chrome extension developed by Dovira Labs.',
+    });
+    graph[0].mainEntity = { '@id': `${url}#software` };
+  }
+
   if (route === '/founder') {
     graph.push({
       '@type': 'Person',
@@ -86,19 +100,38 @@ for (const [route, [title, description]] of Object.entries(pages)) {
   const routeSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': graph,
-  }).replaceAll('</script', '<\\/script');
+  });
 
   const html = template
     .replace(/<title>.*?<\/title>/, `<title>${fullTitle}</title>`)
-    .replace(/(<meta\s+name="description"\s+content=")[^"]*"/, `$1${escape(description)}"`)
-    .replace(/(<meta\s+property="og:title"\s+content=")[^"]*"/, `$1${fullTitle}"`)
-    .replace(/(<meta\s+property="og:description"\s+content=")[^"]*"/, `$1${escape(description)}"`)
-    .replace(/(<meta\s+property="og:url"\s+content=")[^"]*"/, `$1${url}"`)
-    .replace(/(<link\s+rel="canonical"\s+href=")[^"]*"/, `$1${url}"`)
-    .replace('</head>', `    <script type="application/ld+json" id="route-structured-data">${routeSchema}</script>\n  </head>`);
+    .replace(
+      /<meta\s+name="description"\s+content=".*?"\s*\/?>/,
+      `<meta name="description" content="${escape(description)}" />`,
+    )
+    .replace(
+      /<meta\s+property="og:title"\s+content=".*?"\s*\/?>/,
+      `<meta property="og:title" content="${fullTitle}" />`,
+    )
+    .replace(
+      /<meta\s+property="og:description"\s+content=".*?"\s*\/?>/,
+      `<meta property="og:description" content="${escape(description)}" />`,
+    )
+    .replace(
+      /<meta\s+property="og:url"\s+content=".*?"\s*\/?>/,
+      `<meta property="og:url" content="${url}" />`,
+    )
+    .replace(
+      /<link\s+rel="canonical"\s+href=".*?"\s*\/?>/,
+      `<link rel="canonical" href="${url}" />`,
+    )
+    .replace(
+      /<script\s+type="application\/ld\+json"\s+id="route-structured-data">.*?<\/script>/,
+      `<script type="application/ld+json" id="route-structured-data">${routeSchema}</script>`,
+    );
 
-  const directory = route === '/' ? 'dist' : `dist${route}`;
-  await mkdir(directory, { recursive: true });
-  await writeFile(`${directory}/index.html`, html);
+  const outDir = route === '/' ? 'dist' : `dist${route}`;
+  await mkdir(outDir, { recursive: true });
+  await writeFile(`${outDir}/index.html`, html, 'utf8');
 }
+
 console.log(`Generated metadata and structured data for ${Object.keys(pages).length} routes.`);
